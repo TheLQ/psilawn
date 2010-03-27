@@ -1,0 +1,16 @@
+#summary The programmers log that will be turned in at the end of the project
+#labels Featured,Phase-Design
+
+= Introduction =
+
+This right here is the log of what happens with the programmers. Everything NEEDS to be documented. Create a new header under log for each date
+
+= Log =
+
+== Friday, March 26, 2010 ==
+
+Today was when programming officially started because the programming cable came today. The first logic was written just to test the sensors. A simple infinite loops with if...else statements was used to try and make the sensors turn off and on motors.
+
+The line tracking sensor is hard to use. The purpose of them is to detect the IR lights around the border (places where its not supposed to go) and turn around when it gets too close. The returned numbers to the controller to tell how strong the IR light is ranged from 0 - ~1200 with it normally being around 1000. However various remotes, flashlights, nor laser pointers could not affect the values. The only thing that we could do is completely block out the light by covering it with our hands, which is pretty useless to us. More investigating is needed to find out the various specs of it.
+
+The next thing we tested was the Ultrasonic sensor. It operates by sending out sound waves, listening for the response, and timing all of it. The returned vales are between 0 - 254. At first the values where bouncing all over the place, randomly jumping from 20 - 120. After getting frustrated we controlled the conditions more by pointing it away from all of the moving people, putting a tape measure on the ground, holding up a large piece of cardbord, and trying to match inches to returned values. After testing however, it seemed that the returned values are pretty close to the distance in inches, which is pretty cool because it takes out a lot of calculations and guessing from the code. Some logic though will need to implemented that will throw out values above 250 which sprinkle the incoming data.
