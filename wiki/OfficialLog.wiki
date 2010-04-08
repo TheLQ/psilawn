@@ -42,3 +42,17 @@ The transverse part is a little harder. Since the entire thing moves on a circle
 -IR sensor: At the parts where the robot can't go, a piece of wood would be up. As the sensor gets close, more IR would get reflected, and it knows that that is the end of its transverse. Same on the other side. Pro's: Absolute boundaries. Con's: Harder to program due to random incorrect values, never really know where the center is.
 
 -Leon Blakey
+
+== Wednesday, April 7, 2010 ==
+
+Today was a proof of concept day. An issue highlighted above was how to tell where the arm transverse position. A simple design that we came up with was painting an arc where it would be traversing and using the IR sensor to detect the light. Half would be black, half would be gray, and the center would be white. Knowing this, simple programming could be written to center it. 
+
+To test this concept, me and Michael put together a simple program to tell what color it was detecting. It took alot of testing to find the right intensity values, but eventually they were found. We simply said that anything above 950 is gray, anything less that 900 is white, and the in between is black. The reason that black is more intense then gray is that the gray is very shiny. 
+
+One minor programming issue that we ran into was that the original code got corrupted, a weird "linking error" was found. After lots of debugging we simply made a new project and copied the code to it.
+
+There was some talk that the robot would be programmed a path instead of fully autonomous. The process to do it is very hard and the end result would most likely be flaky. 
+
+Since earlier testing has found that the motor output nor the sensor output cannot trip the relay we have, new relays have been ordered that are supposed to work with the vex controller. Hopefully they do.
+
+-Leon Blakey
